@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>IVAO Virtual Airlines Online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #003366;
+        }
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;       /* permite quebrar linha */
+            justify-content: center;
+            gap: 20px;             /* espaço entre cards */
+            margin-top: 20px;
+        }
+        .card {
+            background-color: #f9f9f9;
+            border: 1px solid #333;
+            border-radius: 8px;
+            width: 220px;          /* largura fixa em desktop */
+            text-align: center;
+            padding: 15px;
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+        }
+        .card h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #003366;
+        }
+        .card img {
+            width: 100%;
+            max-width: 200px;      /* limite da imagem */
+            height: auto;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .card {
+                width: 100%;       /* ocupa toda a largura no telemóvel */
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>IVAO Virtual Airlines Online</h1>
+
+    <div class="cards-container">
+        <div class="card">
+            <h2>TAP</h2>
+            <img src="https://status.ivao.aero/VA/TAP.png" alt="TAP">
+        </div>
+        <div class="card">
+            <h2>SWI</h2>
+            <img src="https://status.ivao.aero/VA/SWI.png" alt="SWI">
+        </div>
+        <div class="card">
+            <h2>Texto livre 3</h2>
+            <img src="imagem3.png" alt="Imagem 3">
+        </div>
+        <div class="card">
+            <h2>Texto livre 4</h2>
+            <img src="imagem4.png" alt="Imagem 4">
+        </div>
+        <div class="card">
+            <h2>Texto livre 5</h2>
+            <img src="imagem5.png" alt="Imagem 5">
+        </div>
+        <div class="card">
+            <h2>Texto livre 6</h2>
+            <img src="imagem6.png" alt="Imagem 6">
+        </div>
+    </div>
+</body>
+</html>
