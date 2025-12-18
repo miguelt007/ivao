@@ -12,71 +12,70 @@
             text-align: center;
             color: #003366;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;       /* permite quebrar linha */
+            justify-content: center;
+            gap: 20px;             /* espaço entre cards */
             margin-top: 20px;
         }
-        th, td {
+        .card {
+            background-color: #f9f9f9;
             border: 1px solid #333;
+            border-radius: 8px;
+            width: 220px;          /* largura fixa em desktop */
             text-align: center;
-            padding: 10px;
+            padding: 15px;
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
         }
-        .texto-livre {
-            background-color: #f0f0f0;
-            font-weight: bold;
+        .card h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #003366;
         }
-        .imagem {
-            background-color: #e6f7ff;
-        }
-        img {
-            width: 220px;   /* tamanho padrão em desktop */
+        .card img {
+            width: 100%;
+            max-width: 200px;      /* limite da imagem */
             height: auto;
         }
 
         /* Responsividade */
-        @media (max-width: 1024px) {
-            img {
-                width: 180px; /* tablets */
-            }
-        }
         @media (max-width: 768px) {
-            table, tr, td {
-                display: block;   /* transforma em blocos */
-                width: 100%;
-            }
-            td {
-                margin-bottom: 15px;
-            }
-            img {
-                width: 100%; /* ocupa toda a largura no telemóvel */
-                max-width: 300px; /* limite para não ficar gigante */
+            .card {
+                width: 100%;       /* ocupa toda a largura no telemóvel */
+                max-width: 300px;
             }
         }
     </style>
 </head>
 <body>
-    <h1>Ivao Virtual Airlines Online</h1>
+    <h1>IVAO Virtual Airlines Online</h1>
 
-    <table>
-        <tr>
-            <!-- Primeira linha: texto livre -->
-            <td class="texto-livre">TAP</td>
-            <td class="texto-livre">SWI</td>
-            <td class="texto-livre">Texto livre 3</td>
-            <td class="texto-livre">Texto livre 4</td>
-            <td class="texto-livre">Texto livre 5</td>
-            <td class="texto-livre">Texto livre 6</td>
-        </tr>
-        <tr>
-            <!-- Segunda linha: imagens .png -->
-            <td class="imagem"><img src="https://status.ivao.aero/VA/TAP.png" alt="TAP"></td>
-            <td class="imagem"><img src="https://status.ivao.aero/VA/SWI.png" alt="SWI"></td>
-            <td class="imagem"><img src="imagem3.png" alt="Imagem 3"></td>
-            <td class="imagem"><img src="imagem4.png" alt="Imagem 4"></td>
-            <td class="imagem"><img src="imagem5.png" alt="Imagem 5"></td>
-            <td class="imagem"><img src="imagem6.png" alt="Imagem 6"></td>
-        </tr>
-    </table>
+    <div class="cards-container">
+        <div class="card">
+            <h2>TAP</h2>
+            <img src="https://status.ivao.aero/VA/TAP.png" alt="TAP">
+        </div>
+        <div class="card">
+            <h2>SWI</h2>
+            <img src="https://status.ivao.aero/VA/SWI.png" alt="SWI">
+        </div>
+        <div class="card">
+            <h2>Texto livre 3</h2>
+            <img src="imagem3.png" alt="Imagem 3">
+        </div>
+        <div class="card">
+            <h2>Texto livre 4</h2>
+            <img src="imagem4.png" alt="Imagem 4">
+        </div>
+        <div class="card">
+            <h2>Texto livre 5</h2>
+            <img src="imagem5.png" alt="Imagem 5">
+        </div>
+        <div class="card">
+            <h2>Texto livre 6</h2>
+            <img src="imagem6.png" alt="Imagem 6">
+        </div>
+    </div>
 </body>
 </html>
